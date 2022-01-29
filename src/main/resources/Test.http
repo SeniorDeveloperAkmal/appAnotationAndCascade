@@ -1,0 +1,59 @@
+###
+POST http://localhost:8080/api/person
+Content-Type: application/json
+
+{
+  "fullName" : "Alisher",
+  "addressDtoList":
+  [
+    {
+      "street": "G'uncha",
+      "city": "Tashkent",
+      "personId": 1
+    },
+    {
+      "street": "Soybuyi",
+      "city": "Shaxrisabz",
+      "personId": 2
+    }
+  ]
+}
+
+###
+POST http://localhost:8080/api/address
+Content-Type: application/json
+
+[
+  {
+    "street": "Farobiy",
+    "city": "Tashkent",
+    "personId": 1
+  },
+  {
+    "street": "Qoraqamish",
+    "city": "Shaxrisabz",
+    "personId": 1
+  }
+]
+
+
+###
+DELETE http://localhost:8080/api/person/25
+
+###
+POST http://localhost:8080/api/client
+Content-Type: application/json
+
+{
+  "fullName": "Sheraliyev Sherali Sheraliyevich",
+  "phoneNumber": "656554987451",
+  "bankAccount": {
+    "code": "12374185298"
+  }
+}
+
+###
+DELETE http://localhost:8080/api/person/forTransaction/1
+
+###
+GET http://localhost:8080/api/person/
